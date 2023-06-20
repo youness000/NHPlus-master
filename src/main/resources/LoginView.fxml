@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<!-- Main Borderpane start -->
+<!-- Dokumentation finden Sie im Link unter -->
+<!-- https://www.section.io/engineering-education/design-a-sign-up-and-login-gui-using-javafx/ -->
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.2"
+            fx:controller="controller.LoginPflegerController">
+
+    <!-- Beginning of the left part of the Borderpane -->
+    <left>
+
+        <!-- An AnchorPane in the Left BorderPane -->
+        <AnchorPane prefHeight="-Infinity" prefWidth="400.0" style="-fx-background-color: #ffffff;"
+                    BorderPane.alignment="CENTER">
+            <children>
+
+                <!-- Logo -->
+                <ImageView fitHeight="200" fitWidth="200.0" layoutY="220.0" layoutX="100.0"
+                           pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="src/hospitaliste.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </left>
+    <!-- Ending of the left part of the Borderpane -->
+
+    <!-- Beginning of the right part of the Borderpane -->
+    <right>
+        <AnchorPane prefHeight="600.0" prefWidth="600.0" BorderPane.alignment="CENTER" >
+            <children>
+
+                <!-- The Beginning of Logo -->
+                <ImageView fitHeight="57.0" fitWidth="101.0" layoutX="122.0" layoutY="206.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="src/stethoscope.png"/>
+                    </image>
+                </ImageView>
+                <TextField fx:id="txtFieldCompanyName" layoutX="220.0" layoutY="201.0" prefHeight="57.0" prefWidth="263.0"
+                           style="-fx-background-color: transparent; -fx-text-fill: #24a0ed;" text="NHPlus">
+                    <font>
+                        <Font name="SansSerif Regular" size="25.0"/>
+                    </font>
+                </TextField>
+                <!-- The End of Logo -->
+
+                <!-- The Beginning of Login form -->
+                <Label layoutX="244.0" layoutY="260.0" prefHeight="30.0" prefWidth="90.0" style="-fx-text-fill: #A9A9A9;"
+                       text="Login">
+                    <font>
+                        <Font name="SansSerif Regular" size="30.0"/>
+                    </font>
+                </Label>
+                <Button fx:id="cancelButton" layoutX="380.0" layoutY="213.0" mnemonicParsing="false"
+                        onAction="#onCancelButtonClick"
+                        style="-fx-background-color: transparent; -fx-text-fill: #A9A9A9; -fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;"
+                        text="Abbruch">
+                    <font>
+                        <Font size="12.0"/>
+                    </font>
+                </Button>
+                <TextField fx:id="loginUsernameTextField" layoutX="150.0" layoutY="300.0" prefHeight="30.0"
+                           prefWidth="300.0" promptText="Benutzername"
+                           style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+                    <font>
+                        <Font name="SansSerif Regular" size="14.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="TEXT"/>
+                    </cursor>
+                </TextField>
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="110.0" layoutY="300.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="src/users.png"/>
+                    </image>
+                </ImageView>
+                <PasswordField fx:id="loginPasswordPasswordField" layoutX="150.0" layoutY="340.0" prefHeight="30.0"
+                               prefWidth="300.0" promptText="Passwort"
+                               style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+                    <font>
+                        <Font name="SansSerif Regular" size="14.0"/>
+                    </font>
+                </PasswordField>
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="110.0" layoutY="340.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="src/lock.png"/>
+                    </image>
+                </ImageView>
+                <CheckBox layoutX="150.0" layoutY="395.0" mnemonicParsing="false" style="-fx-text-fill: #A9A9A9;"
+                          text="Angemeldet bleiben.">
+                    <font>
+                        <Font name="SansSerif Regular" size="12.0"/>
+                    </font>
+                </CheckBox>
+                <Button layoutX="190.0" layoutY="435.0" mnemonicParsing="false"
+                        style="-fx-background-color: transparent; -fx-text-fill: #A9A9A9;" text="Passwort vergessen ?"
+                        underline="true">
+                    <font>
+                        <Font size="12.0"/>
+                    </font>
+                </Button>
+                <Label fx:id="invalidLoginCredentials" alignment="CENTER" contentDisplay="CENTER" layoutX="150.0"
+                       layoutY="375.0" prefHeight="16.0" prefWidth="300.0" textAlignment="CENTER" textFill="#e74c3c">
+                    <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets>
+                </Label>
+                <Button fx:id="LoginButton" layoutX="335.0" layoutY="395.0" mnemonicParsing="false"
+                        onAction="#onLoginButtonClick"
+                        style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;"
+                        text="Anmelden">
+                    <font>
+                        <Font size="12.0"/>
+                    </font>
+                </Button>
+                <!-- End of Login Form -->
+
+                <!-- A simple line Separator -->
+                <Line endX="500.0" endY="380.0" fill="DARKGRAY" layoutY="110.0" opacity="0.5" startX="100.0"
+                      startY="380.0" stroke="#a8a8a8ad" strokeLineJoin="BEVEL" strokeWidth="3.0"/>
+            </children>
+        </AnchorPane>
+    </right>
+    <!-- Ending of the left part of the Borderpane -->
+
+    <!-- Beginning of the bottom part of the Borderpane -->
+    <bottom>
+
+        <!-- Simple Copyright -->
+        <Label prefHeight="16.0" prefWidth="107.0" style="-fx-text-fill: #B9a9a9;" text="NHPlus © 2023"
+               BorderPane.alignment="CENTER"/>
+    </bottom>
+    <!-- Ending of the left part of the Borderpane -->
+
+</BorderPane>
