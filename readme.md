@@ -50,3 +50,7 @@ Wird das Open JDK verwendet, werden JavaFX-Abhängigkeiten nicht importiert. Die
 - Benutzername: SA
 - Passwort: SA
 - Bitte nicht in die Datenbank schauen, während die Applikation läuft. Das sorgt leider für einen Lock, der erst wieder verschwindet, wenn IntelliJ neugestartet wird!
+
+## Username und Passwort zum anmelden:
+  - Username: admin
+  - Passwort: admin
