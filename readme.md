@@ -54,3 +54,6 @@ Wird das Open JDK verwendet, werden JavaFX-Abhängigkeiten nicht importiert. Die
 ## Username und Passwort zum anmelden:
   - Username: admin
   - Passwort: admin
+
+## User Story:
+Wir haben ein paar Änderungen in das User Story gemacht, das können Sie in die neu "NHPlus User Stories 2" Word Datei sehen.
